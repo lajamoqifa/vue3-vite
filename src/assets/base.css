@@ -62,12 +62,51 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
-  transition: color 0.5s, background-color 0.5s;
+  transition:
+    color 0.5s,
+    background-color 0.5s;
   line-height: 1.6;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.mr4 {
+  margin-right: 4px;
+}
+.mr8 {
+  margin-right: 8px;
+}
+.mr16 {
+  margin-right: 16px;
+}
+.mr32 {
+  margin-right: 32px;
+}
+
+.ml4 {
+  margin-left: 4px;
+}
+.ml8 {
+  margin-left: 8px;
+}
+.ml16 {
+  margin-left: 16px;
+}
+.ml32 {
+  margin-left: 32px;
 }

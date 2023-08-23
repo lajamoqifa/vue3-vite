@@ -1,88 +1,28 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-const value = ref('Hello World from App.vue')
+import Menu from './layouts/menu-com.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-      {{ value }}
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <a-button type="primary">Primary Button</a-button>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <a-layout style="width: 100vw; height: 100vh">
+    <a-layout-sider class="siderStyle"><Menu /></a-layout-sider>
+    <a-layout-content class="contentStyle"> <RouterView /></a-layout-content>
+  </a-layout>
 </template>
 
 <style scoped lang="less">
-@color: #f2f2f2;
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-  color: @mainColor;
+.siderStyle {
+  width: 200px;
+  height: 100%;
+  text-align: 'center';
+  line-height: '120px';
+  background-color: '#3ba0e9';
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.contentStyle {
+  width: calc(100% - 200px);
+  height: 100%;
+  text-align: 'center';
+  min-height: 120;
+  line-height: '120px';
+  background-color: '#108ee9';
 }
 </style>
